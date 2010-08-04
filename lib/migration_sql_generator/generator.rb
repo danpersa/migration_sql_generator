@@ -7,7 +7,7 @@ module MigrationSqlGenerator
       end
 
       def methods_to_modify
-        [:execute, :do_execute, :column_for, :tables, :select_all] & connection.class.methods
+        [:execute, :do_execute, :rename_column, :change_column, :column_for, :tables, :indexes, :select_all] & connection.class.methods
       end
     
       def redefine_execute_methods
@@ -15,8 +15,11 @@ module MigrationSqlGenerator
         connection.class.send(:define_method, :execute) {|*args| Writer.write(args.first) }
         connection.class.send(:define_method, :do_execute) {|*args| Writer.write(args.first) }
         connection.class.send(:define_method, :column_for) {|*args| args.last }
+        connection.class.send(:define_method, :change_column) {|*args| [] }
+        connection.class.send(:define_method, :rename_column) {|*args| [] }
         connection.class.send(:define_method, :tables) {|*args| [] }
         connection.class.send(:define_method, :select_all) {|*args| [] }
+        connection.class.send(:define_method, :indexes) {|*args| [] }
       end
 
       def save_original_methods
