@@ -17,7 +17,7 @@ module MigrationSqlGenerator
       end
   
       def write(string)
-        File.open(path, 'a') { |file| file << string; file << "\n" }
+        File.open(path, 'a') { |file| file << string; file << ";\n" }
       end
     end
   end
