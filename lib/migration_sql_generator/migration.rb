@@ -25,12 +25,12 @@ module MigrationSqlGenerator
 
     def up
       migration_class.up
-      #connection.execute("INSERT INTO schema_migrations (version) VALUES (#{number})")
+      connection.execute("INSERT INTO schema_migrations (version) VALUES (#{number})")
     end
 
     def down
       migration_class.down
-      #connection.execute("DELETE FROM schema_migrations WHERE version = #{number}")
+      connection.execute("DELETE FROM schema_migrations WHERE version = #{number}")
     end
 
     def connection
