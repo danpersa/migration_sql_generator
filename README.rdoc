@@ -8,7 +8,7 @@ It has only been tested with the sqlserver and mysql adapters (see limitations).
 
 == Installation
 
-script/plugin install git://github.com/muness/migration_sql_generator.git
+rails plugin install git://github.com/plentz/migration_sql_generator.git
 
 == Usage
 
