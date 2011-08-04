@@ -17,7 +17,7 @@ rake db:generate:migration_sql
 == Known limits
 
 * May fail on migrations that perform CRUD via ActiveRecord methods
-* With the mysql adapter, fails on change_column, rename_column
+* With the mysql and oracle adapter, fails on change_column, rename_column
 * Fails on redhillonrails_core plugin with the mysql adapter
 
 == Credits
