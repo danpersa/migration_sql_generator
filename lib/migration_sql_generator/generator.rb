@@ -42,7 +42,7 @@ module MigrationSqlGenerator
       end
     
       def migrations
-        Dir.glob(File.join(RAILS_ROOT, "db", "migrate", '*.rb'))
+        Dir.glob(File.join(Rails.root, "db", "migrate", '*.rb'))
       end
         
       def generate

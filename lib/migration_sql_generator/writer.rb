@@ -9,7 +9,7 @@ module MigrationSqlGenerator
       end
   
       def output_dir
-        File.join(RAILS_ROOT, "db", "migration_sql")
+        File.join(Rails.root, "db", "migration_sql")
       end
   
       def path
