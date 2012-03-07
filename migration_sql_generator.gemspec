@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*"]             
   s.license = 'MIT'           
   s.test_files = Dir["spec/lib/**/*.rb"]
-  s.add_runtime_dependency 'activemodel', '~> 3.1'
+  s.add_runtime_dependency 'activemodel', '~> 3.2'
   s.add_runtime_dependency 'rake', '~> 0.9'
   s.add_development_dependency 'rspec', '~> 2.7' 
   s.add_development_dependency 'rspec-rails', '~> 2.7'
